@@ -6,15 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vogli Work & Solutions</title>
   <style>
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      background: linear-gradient(to right, #f3e5f5, #ffffff);
       color: #2b2b2b;
     }
 
+    nav {
+      background-color: #6a1b9a;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 10px 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
     header {
-      background-color: #00796b;
+      background-color: #8e24aa;
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -30,34 +62,71 @@
       margin: auto;
     }
 
-    .highlight {
-      background-color: #f1f1f1;
-      border-left: 6px solid #00796b;
-      padding: 20px;
-      margin: 20px 0;
+    .accordion {
+      background-color: #ffffff;
+      color: #333;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion:hover {
+      background-color: #f3e5f5;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
     }
 
     .contact {
-      background-color: #00796b;
+      background-color: #6a1b9a;
       color: white;
       padding: 30px 20px;
       text-align: center;
     }
 
-    .contact h2 {
-      margin-top: 0;
-    }
-
     footer {
-      background-color: #004d40;
+      background-color: #4a148c;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 10px 20px;
       font-size: 0.9rem;
     }
 
-    ul {
-      text-align: left;
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: #f8f8f8;
+      border-radius: 8px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #8e24aa;
     }
 
     a.social {
@@ -73,41 +142,113 @@
 </head>
 <body>
 
-  <header>
+  <nav>
+    <ul>
+      <li><a href="#home">Αρχική</a></li>
+      <li><a href="#about">Σχετικά</a></li>
+      <li><a href="#services">Υπηρεσίες</a></li>
+      <li><a href="#contact">Επικοινωνία</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
     <div class="logo">🌍👤</div>
     <h1>Vogli Work & Solutions</h1>
     <p>Εύρεση Ανθρώπινου Δυναμικού & Ανάπτυξη Πωλήσεων</p>
   </header>
 
-  <div class="section">
-    <h2>Ποιοι Είμαστε</h2>
-    <p>Στη <strong>Vogli Work & Solutions</strong>, εξειδικευόμαστε στην εύρεση, αξιολόγηση και τοποθέτηση ανθρώπινου δυναμικού σύμφωνα με τις πραγματικές ανάγκες της κάθε επιχείρησης. Διαχειριζόμαστε και αναπτύσσουμε τις πωλήσεις για λογαριασμό εταιρειών, εξασφαλίζοντας σταθερή ανάπτυξη χωρίς το κόστος μόνιμου προσωπικού, αλλά μέσω επιλεγμένων και αξιόπιστων συνεργατών.</p>
-    <div class="highlight">
-      Με <strong>μεθοδικότητα</strong> και <strong>αποτελεσματικότητα</strong>, εμπνέουμε και οραματιζόμαστε καινοτόμες ιδέες και τις αξιοποιούμε καταλλήλως.
+  <div class="section" id="about">
+    <h2>Σχετικά με Εμάς</h2>
+    <p>Η ομάδα μας στη <strong>Vogli Work & Solutions</strong> δραστηριοποιείται στον τομέα της διαχείρισης ανθρώπινου δυναμικού και της ανάπτυξης πωλήσεων, με γνώμονα τη μεθοδικότητα, την αξιοπιστία και την απόδοση.</p>
+    <p>Απευθυνόμαστε σε επιχειρήσεις που επιδιώκουν να αναπτυχθούν με σύγχρονες, ευέλικτες και στοχευμένες λύσεις – χωρίς το βάρος της μόνιμης στελέχωσης, αλλά με μόνιμους εξωτερικούς συνεργάτες.</p>
+    <p>Το περιεχόμενο της παρούσας ιστοσελίδας αποτελεί <strong>εταιρικό portfolio</strong> και παρουσιάζει την προσέγγισή μας, την εμπειρία και το όραμά μας ενόψει της έναρξης επίσημης επαγγελματικής δραστηριότητας.</p>
+  </div>
+
+  <div class="section" id="services">
+    <h2>Υπηρεσίες</h2>
+
+    <button class="accordion">Εύρεση & Αξιολόγηση Προσωπικού</button>
+    <div class="panel">
+      <p>Αναλαμβάνουμε τη στοχευμένη προσέγγιση, επιλογή και αξιολόγηση υποψηφίων, βάσει των αναγκών και της κουλτούρας κάθε επιχείρησης.</p>
+      <strong>KPIs:</strong>
+      <ul>
+        <li>Χρόνος εύρεσης υποψηφίων</li>
+        <li>Ποσοστό επιτυχούς τοποθέτησης</li>
+        <li>Δείκτης ικανοποίησης συνεργασίας (NPS)</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Εξωτερικές Ομάδες Πωλήσεων</button>
+    <div class="panel">
+      <p>Δημιουργούμε και διαχειριζόμαστε αποδοτικές ομάδες πωλήσεων, που λειτουργούν εξωτερικά, με στόχο τα αποτελέσματα.</p>
+      <strong>KPIs:</strong>
+      <ul>
+        <li>Μηνιαία απόδοση/πωλήσεις</li>
+        <li>Ποσοστά μετατροπών</li>
+        <li>Κάλυψη στόχων και γεωγραφικής αγοράς</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Εκπαίδευση & Υποστήριξη Συνεργατών</button>
+    <div class="panel">
+      <p>Παρέχουμε ολοκληρωμένο onboarding, καθοδήγηση και παρακολούθηση για σταθερά ποιοτικά αποτελέσματα.</p>
+      <strong>KPIs:</strong>
+      <ul>
+        <li>Ποσοστό ολοκλήρωσης εκπαίδευσης</li>
+        <li>Απόδοση πρώτου μήνα</li>
+        <li>Συμμόρφωση σε διαδικασίες</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Διοικητική Ανάπτυξη Πωλήσεων</button>
+    <div class="panel">
+      <p>Αναλύουμε, οργανώνουμε και υποστηρίζουμε τη στρατηγική ανάπτυξης πωλήσεων με δομή και στόχους.</p>
+      <strong>KPIs:</strong>
+      <ul>
+        <li>Αύξηση κύκλου εργασιών</li>
+        <li>Αύξηση leads/ευκαιριών</li>
+        <li>Ταχύτητα κλεισίματος πωλήσεων</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Υπηρεσίες</h2>
-    <ul>
-      <li>Εύρεση & αξιολόγηση προσωπικού</li>
-      <li>Εξωτερικές ομάδες πωλήσεων</li>
-      <li>Εκπαίδευση συνεργατών</li>
-      <li>Διοικητική υποστήριξη ανάπτυξης</li>
-    </ul>
-  </div>
-
-  <div class="contact">
-    <h2>Επικοινωνία</h2>
-    <p>📧 Email: <a style="color: white;" href="mailto:egivogli@gmail.com">egivogli@gmail.com</a></p>
-    <p>📞 Τηλέφωνο: <a style="color: white;" href="tel:+306907304303">+30 690 730 4303</a></p>
-    <p>📍 Τοποθεσία: Αθήνα, Ελλάδα</p>
-    <p>🎵 TikTok: <a class="social" href="https://www.tiktok.com/@itsvoglisofficial" target="_blank">@itsvoglisofficial</a></p>
+  <div class="section" id="contact">
+    <h2>Φόρμα Καταχώρησης Συνεργασίας</h2>
+    <form action="https://formsubmit.co/egivogli@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="Ονοματεπώνυμο" placeholder="Ονοματεπώνυμο" required>
+      <input type="text" name="Εταιρεία" placeholder="Επωνυμία Επιχείρησης">
+      <input type="email" name="Email" placeholder="Email" required>
+      <input type="tel" name="Τηλέφωνο" placeholder="Τηλέφωνο">
+      <select name="Υπηρεσία" required>
+        <option value="">Επιλέξτε Υπηρεσία</option>
+        <option value="Εύρεση Προσωπικού">Εύρεση Προσωπικού</option>
+        <option value="Ομάδες Πωλήσεων">Ομάδες Πωλήσεων</option>
+        <option value="Εκπαίδευση Συνεργατών">Εκπαίδευση Συνεργατών</option>
+        <option value="Διοικητική Ανάπτυξη">Διοικητική Ανάπτυξη</option>
+      </select>
+      <textarea name="Μήνυμα" placeholder="Σχόλια ή παρατηρήσεις..." rows="5"></textarea>
+      <input type="submit" value="Υποβολή">
+    </form>
   </div>
 
   <footer>
-    © 2025 Vogli Work & Solutions | All rights reserved.
+    © 2025 Vogli Work & Solutions | All rights reserved.<br>
+    <p style="font-size: 0.9em; color: #ccc;">
+    Το περιεχόμενο της παρούσας ιστοσελίδας αποτελεί προσωπικό επαγγελματικό portfolio. Οι υπηρεσίες παρουσιάζονται ενδεικτικά εν αναμονή επίσημης δραστηριότητας.
+    </p>
   </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach((el) => {
+      el.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 
 </body>
 </html>
